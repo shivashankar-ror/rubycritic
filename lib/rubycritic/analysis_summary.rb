@@ -30,7 +30,7 @@ module RubyCritic
     end
 
     def churns
-      modules.inject(0) { |acc, elem| acc + elem.churn }
+      modules.inject(0) { |acc, elem| acc.to_i + elem.churn.to_i }
     end
 
     def smells
